@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#070817"><title>Shorts Slot Machine</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-theme="neon">
+  <div class="ambient ambient-a"></div><div class="ambient ambient-b"></div>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Shorts Slot Machine home"><span class="brand-icon">▶</span><span><b>SHORTS</b><small>SLOT MACHINE</small></span></a>
+    <div class="stats"><div><small>BALANCE</small><strong id="balance">$100</strong></div><div><small>SPIN COST</small><strong>$10</strong></div><div><small>LAST WIN</small><strong id="lastWin">—</strong></div></div>
+    <button id="settingsBtn" class="icon-btn" title="Video pool info" aria-label="Video pool info">⚙</button>
+  </header>
+  <main>
+    <section class="intro"><div><p class="eyebrow">THE INTERNET IS YOUR CASINO</p><h1>Spin the <span>algorithm.</span></h1><p class="sub">Three reels. Infinite brain rot. Absolutely no financial advice.</p></div><div class="status-pill"><i></i><span id="status">Connecting to the chaos…</span></div></section>
+    <section class="game-layout">
+      <aside class="panel themes-panel"><div class="panel-heading"><h2>YOUR STYLES</h2><span class="tiny-tag">COLLECTION</span></div><div id="ownedThemes" class="theme-list"></div><div class="hint-box">✦ <b>Style tip</b><p>Buy a new theme with your winnings. The vibes change; the odds don't.</p></div></aside>
+      <section class="machine-wrap" aria-label="Slot machine">
+        <div class="machine-top"><span>✦ ✦ ✦</span><span class="machine-label">SHORTS • JACKPOT EDITION</span><span>✦ ✦ ✦</span></div>
+        <div class="machine" id="machine"><div class="reels" id="reels"><div class="reel-window"><div class="reel-strip" id="reel0"></div><div class="reel-shade"></div><span class="reel-number">01</span></div><div class="reel-window"><div class="reel-strip" id="reel1"></div><div class="reel-shade"></div><span class="reel-number">02</span></div><div class="reel-window"><div class="reel-strip" id="reel2"></div><div class="reel-shade"></div><span class="reel-number">03</span></div></div>
+          <div class="payline"><span>PAYLINE</span></div>
+          <div class="machine-controls"><div class="jackpot-card"><small>TOP JACKPOT</small><strong>$500</strong><span>👑 TRIPLE MATCH</span></div><button id="spinBtn" class="spin-btn"><span class="spin-icon">⟳</span><b>SPIN</b><small>$10 PER PLAY</small></button><div class="win-card"><small>LAST PAYOUT</small><strong id="payoutDisplay">$0</strong><span id="resultLabel">READY WHEN YOU ARE</span></div></div>
+        </div>
+        <div class="machine-foot"><span>⚡ RNG CERTIFIED (BY NOBODY)</span><span>FAKE MONEY • REAL BRAIN ROT</span></div>
+        <div class="action-row"><button id="rerollBtn" class="secondary-btn">⟳ &nbsp; RE-ROLL SHORTS</button><button id="soundBtn" class="secondary-btn">♫ &nbsp; SOUND: OFF</button></div>
+        <p id="message" class="message" role="status">Pull the lever. Ruin your imaginary finances.</p>
+      </section>
+      <aside class="panel payout-panel"><div class="panel-heading"><h2>PAYOUTS</h2><span class="tiny-tag">PER SPIN</span></div><div class="payout-list"><div class="payout-row"><span class="symbols">▶ ▶ ▶</span><span><b>Triple Short</b><small>Same video ×3</small></span><strong>$500</strong></div><div class="payout-row"><span class="symbols">▣ ▣ ▣</span><span><b>Three in a row</b><small>Three unique Shorts</small></span><strong>$100</strong></div><div class="payout-row"><span class="symbols">▶ ▶ ▶</span><span><b>Triple match</b><small>Same Short ×3</small></span><strong>$100</strong></div><div class="payout-row"><span class="symbols">▶ ▶ ·</span><span><b>Pair match</b><small>Same Short ×2</small></span><strong>$25</strong></div><div class="payout-row"><span class="symbols">▶ · ·</span><span><b>Near miss</b><small>Three different Shorts</small></span><strong>$0</strong></div><div class="payout-row no-win"><span class="symbols">▣ ▣ ▣</span><span><b>Brain rot tax</b><small>No matching videos</small></span><strong>$0</strong></div></div><div class="disclaimer">Payouts are pretend. Regret is a feature.</div></aside>
+    </section>
+    <section class="store-section"><div class="store-heading"><div><p class="eyebrow">CUSTOMIZE YOUR DELUSION</p><h2>Available styles</h2></div><div class="store-balance">YOUR WALLET <b id="storeBalance">$100</b></div></div><div id="themeStore" class="store-grid"></div></section>
+  </main>
+  <footer><span>▶</span> Not real money. Just YouTube Shorts. <span class="dot">•</span> Play irresponsibly, responsibly.</footer>
+  <dialog id="settingsDialog" class="settings-dialog"><form method="dialog"><div class="dialog-heading"><div><p class="eyebrow">BACKEND / VIDEO POOL</p><h2>Add more Shorts</h2></div><button class="icon-btn" value="cancel" aria-label="Close">✕</button></div><p class="dialog-copy">The site's video list lives in <code>videos.json</code>. Add a new object with a YouTube URL and optional title, save the file, then publish the updated site. No API key or backend server is needed.</p><pre class="pool-example">{
+  "url": "https://www.youtube.com/shorts/VIDEO_ID",
+  "title": "Optional funny title"
+}</pre><p class="fine-print">Re-roll Shorts randomly selects from the full pool. Keep video IDs unique; duplicate IDs are automatically removed.</p><div class="dialog-actions"><button class="spin-btn compact" value="cancel">Got it</button></div></form></dialog>
+  <script src="app.js"></script>
+<div id="playerPrewarm" aria-hidden="true"></div>
+</body></html>
